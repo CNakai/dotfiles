@@ -7,11 +7,14 @@
     :config
     (evil-leader/set-leader "<SPC>")
     (evil-leader/set-key
-      "j" 'evil-next-buffer
-      "k" 'evil-prev-buffer
+      "j" 'evil-scroll-down
+      "k" 'evil-scroll-up
       "h" 'evil-beginning-of-line
       "l" 'evil-end-of-line
-      "d" 'kill-this-buffer)
+      "d" 'kill-this-buffer
+      "c" 'centered-cursor-mode
+      "b" 'evil-next-buffer
+      "B" 'evil-prev-buffer)
     (global-evil-leader-mode))
 
 (use-package evil-commentary
@@ -33,6 +36,13 @@
   :ensure t)
 
 (use-package evil-matchit
-  :ensure t)
+  :ensure t
+  :config
+  (global-evil-matchit-mode 1))
+
+(use-package evil-visualstar
+  :ensure t
+  :config
+  (global-evil-visualstar-mode))
 
 (evil-mode)

@@ -13,8 +13,6 @@
 
 (load "~/.emacs.d/init/load_all.el")
 
-;; Solarized setup
-(add-to-list 'custom-theme-load-path "~/.emacs-color-theme-solarized")
 
 ;; Customization based configuration
 (custom-set-variables
@@ -23,10 +21,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
- '(custom-enabled-themes (quote (solarized)))
  '(custom-safe-themes
    (quote
-    ("8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" default)))
+    ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(evil-digraphs-table-user
    (quote
     (((122 104)
@@ -35,8 +32,14 @@
       . 643)
      ((107 97)
       . 624)
+     ((117 117)
+      . 623)
      ((111 108)
       . 596)
+     ((97 98)
+      . 593)
+     ((97 114)
+      . 594)
      ((101 108)
       . 603)
      ((99 108)
@@ -70,13 +73,19 @@
  '(evil-escape-mode t)
  '(evil-escape-unordered-key-sequence t)
  '(evil-magic (quote very-magic))
- '(fill-column 110)
+ '(fill-column 105)
+ '(menu-bar-mode nil)
  '(org-startup-indented t)
  '(package-selected-packages
    (quote
-    (alchemist elixir-mode linum-relative evil-lion evil-leader evil-exchange evil-commentary macrostep slime evil-tutor evil-surround evil-matchit evil-escape ess)))
+    (default-text-scale haskell-emacs haskell-mode alchemist elixir-mode linum-relative evil-lion evil-leader evil-exchange evil-commentary macrostep slime evil-tutor evil-surround evil-matchit evil-escape ess)))
  '(show-paren-mode t)
- '(tool-bar-mode nil))
+ '(solarized-distinct-fringe-background t)
+ '(solarized-high-contrast-mode-line t)
+ '(tool-bar-mode nil)
+ '(web-mode-code-indent-offset 2)
+ '(web-mode-css-indent-offset 2)
+ '(web-mode-markup-indent-offset 2))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -98,16 +107,20 @@
 (setq inferior-lisp-program "/usr/local/bin/sbcl")
 (setq slime-contribs '(slime-fancy))
 
-;; Add opam emacs directory to the load-path
-(setq opam-share (substring (shell-command-to-string "opam config var share 2> /dev/null") 0 -1))
-(add-to-list 'load-path (concat opam-share "/emacs/site-lisp"))
-;; Load merlin-mode
-(require 'merlin)
-;; Start merlin on ocaml files
-(add-hook 'tuareg-mode-hook 'merlin-mode t)
-(add-hook 'caml-mode-hook 'merlin-mode t)
-;; Enable auto-complete
-(setq merlin-use-auto-complete-mode 'easy)
-;; Use opam switch to lookup ocamlmerlin binary
-(setq merlin-command 'opam)
 
+;; Uncomment in case of CAMLs
+
+;; ;; Add opam emacs directory to the load-path
+;; (setq opam-share (substring (shell-command-to-string "opam config var share 2> /dev/null") 0 -1))
+;; (add-to-list 'load-path (concat opam-share "/emacs/site-lisp"))
+;; ;; Load merlin-mode
+;; (require 'merlin)
+;; ;; Start merlin on ocaml files
+;; (add-hook 'tuareg-mode-hook 'merlin-mode t)
+;; (add-hook 'caml-mode-hook 'merlin-mode t)
+;; ;; Enable auto-complete
+;; (setq merlin-use-auto-complete-mode 'easy)
+;; ;; Use opam switch to lookup ocamlmerlin binary
+;; (setq merlin-command 'opam)
+
+(put 'downcase-region 'disabled nil)
