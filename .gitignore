@@ -48,6 +48,7 @@
 .dmrc
 .dropbox-dist/*
 .dropbox/*
+.emacs.d/elpa/*
 .ghc/*
 .gimp-2.8/*
 .gitconfig
@@ -83,11 +84,14 @@
 .xsession-errors
 .xsession-errors.old
 .zcompdump
-Dropbox/*
-NAU
-Pictures/*
 disconnect_monitor.sh
-downloads/*
 examples.desktop
 monitor_connect.sh
+Documents/*
+Downloads/*
+Dropbox/*
+Music/*
+Pictures/*
+playspace/*
+Videos/*
 workspace/*
