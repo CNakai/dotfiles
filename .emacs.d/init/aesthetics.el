@@ -1,22 +1,17 @@
 (use-package solarized-theme
+  :diminish
   :ensure t
   :config
-  (load-theme 'solarized-light t))
+  (load-theme 'solarized-dark t))
 
 (use-package golden-ratio
+  :diminish
   :ensure t
   :config
   (golden-ratio-mode))
 
-(use-package nlinum-relative
-  :ensure t
-  :config
-  (setq nlinum-relative-redisplay-delay 0)
-  (setq nlinum-relative-current-symbol "")
-  (setq nlinum-relative-offset 0)
-  (global-nlinum-relative-mode))
-
 (use-package centered-cursor-mode
   :ensure t
-  :config
-  (global-centered-cursor-mode))
+  :general
+  (utility-leader-def
+   "c" 'centered-cursor-mode))

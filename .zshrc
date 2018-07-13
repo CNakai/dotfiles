@@ -4,11 +4,14 @@ export LC_ALL="en_US.UTF-8"
 export TERM="xterm-256color"
 export PROMPT='%15<..<%~%# '
 export RPROMPT='%t'
+
 # export GOPATH="$HOME/workspace/go"
 # export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
 # export PATH="$PATH:/usr/local/texlive/2015/bin/x86_64-linux/"
-export PATH="$PATH:/home/nakai/.npm-global/bin"
+export PATH="$PATH:/home/nakai/.node_modules/bin"
+export npm_config_prefix=~/.node_modules
 # export NODE_PATH="$NODE_PATH:/home/nakai/.npm-global/lib/node_modules"
+export PATH="$PATH:$HOME/.gem/ruby/2.5.0/bin"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile

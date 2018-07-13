@@ -1,0 +1,21 @@
+(use-package auto-package-update
+  :config
+  (setq auto-package-update-delete-old-versions t)
+  (auto-package-update-maybe))
+
+(use-package diminish)
+
+(use-package restart-emacs)
+
+(use-package general
+  :diminish)
+
+(general-create-definer utilty-leader-def
+  :keymaps 'normal
+  :prefix "SPC")
+
+(utility-leader-def
+   "d" 'kill-this-buffer
+   "1" 'delete-other-windows
+   "w" 'save-buffer
+   "C-r" 'restart-emacs)

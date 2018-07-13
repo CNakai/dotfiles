@@ -11,6 +11,9 @@
 (eval-when-compile
   (require 'use-package))
 
+(setq use-package-always-ensure t)
+(setq use-package-compute-statistics t)
+
 (load "~/.emacs.d/init/load_all.el")
 
 
@@ -26,12 +29,50 @@
     ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(evil-digraphs-table-user
    (quote
-    (((122 104)
+    (((94 58)
+      . 720)
+     ((94 96)
+      . 712)
+     ((94 44)
+      . 716)
+     ((94 39)
+      . 700)
+     ((94 100)
+      . 810)
+     ((94 63)
+      . 740)
+     ((94 118)
+      . 736)
+     ((94 119)
+      . 695)
+     ((94 104)
+      . 688)
+     ((94 119)
+      . 32)
+     ((94 106)
+      . 690)
+     ((94 40)
+      . 865)
+     ((94 41)
+      . 860)
+     ((112 105)
+      . 595)
+     ((116 105)
+      . 599)
+     ((99 105)
+      . 644)
+     ((107 105)
+      . 608)
+     ((113 105)
+      . 667)
+     ((122 104)
       . 658)
      ((115 104)
       . 643)
      ((107 97)
       . 624)
+     ((101 108)
+      . 603)
      ((117 117)
       . 623)
      ((111 108)
@@ -64,24 +105,68 @@
       . 946)
      ((112 102)
       . 632)
+     ((94 40)
+      . 865)
+     ((94 41)
+      . 32)
      ((94 104)
       . 688)
      ((63 115)
-      . 660))) nil (evil-digraphs))
- '(evil-escape-delay 0.2)
- '(evil-escape-key-sequence "jk")
- '(evil-escape-mode t)
- '(evil-escape-unordered-key-sequence t)
- '(evil-magic (quote very-magic))
+      . 660)
+     ((97 126)
+      . 227)
+     ((101 126)
+      . 7869)
+     ((105 126)
+      . 297)
+     ((111 126)
+      . 245)
+     ((117 126)
+      . 361))) nil (evil-digraphs))
  '(fill-column 105)
+ '(indent-tabs-mode nil)
  '(menu-bar-mode nil)
+ '(org-latex-classes
+   (quote
+    (("letter" "\\documentclass[12pt]{letter}"
+      ("" . ""))
+     ("article" "\\documentclass[11pt]{article}"
+      ("\\section{%s}" . "\\section*{%s}")
+      ("\\subsection{%s}" . "\\subsection*{%s}")
+      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+      ("\\paragraph{%s}" . "\\paragraph*{%s}")
+      ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+     ("report" "\\documentclass[11pt]{report}"
+      ("\\part{%s}" . "\\part*{%s}")
+      ("\\chapter{%s}" . "\\chapter*{%s}")
+      ("\\section{%s}" . "\\section*{%s}")
+      ("\\subsection{%s}" . "\\subsection*{%s}")
+      ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
+     ("book" "\\documentclass[11pt]{book}"
+      ("\\part{%s}" . "\\part*{%s}")
+      ("\\chapter{%s}" . "\\chapter*{%s}")
+      ("\\section{%s}" . "\\section*{%s}")
+      ("\\subsection{%s}" . "\\subsection*{%s}")
+      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")))))
  '(org-startup-indented t)
  '(package-selected-packages
    (quote
-    (default-text-scale haskell-emacs haskell-mode alchemist elixir-mode linum-relative evil-lion evil-leader evil-exchange evil-commentary macrostep slime evil-tutor evil-surround evil-matchit evil-escape ess)))
+    (typescript-mode flycheck default-text-scale haskell-emacs haskell-mode alchemist elixir-mode linum-relative evil-lion evil-leader evil-exchange evil-commentary macrostep slime evil-tutor evil-surround evil-matchit evil-escape ess)))
+ '(safe-local-variable-values
+   (quote
+    ((eval face-remap-add-relative
+           (quote default)
+           (quote
+            (:family "Everson Mono" :height 140)))
+     (eval face-remap-add-relative
+           (quote default)
+           (quote
+            (:family "Everson" :weight bold :height 140))))))
  '(show-paren-mode t)
  '(solarized-distinct-fringe-background t)
  '(solarized-high-contrast-mode-line t)
+ '(solarized-use-more-italic t)
+ '(standard-indent 2)
  '(tool-bar-mode nil)
  '(web-mode-code-indent-offset 2)
  '(web-mode-css-indent-offset 2)
@@ -92,7 +177,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Everson Mono" :foundry "EVER" :slant normal :weight bold :height 151 :width normal)))))
+ '(default ((t (:inherit nil :stipple nil :background "#002b36" :foreground "#839496" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight bold :height 130 :width normal :foundry "SRC" :family "Hack")))))
 
 ;; Temporary files setup
 (setq

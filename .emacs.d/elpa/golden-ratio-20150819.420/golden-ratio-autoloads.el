@@ -1,12 +1,10 @@
 ;;; golden-ratio-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
-(add-to-list 'load-path (directory-file-name
-                         (or (file-name-directory #$) (car load-path))))
-
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "golden-ratio" "golden-ratio.el" (0 0 0 0))
+;;;### (autoloads nil "golden-ratio" "golden-ratio.el" (23304 61935
+;;;;;;  771777 825000))
 ;;; Generated autoloads from golden-ratio.el
 
 (autoload 'golden-ratio "golden-ratio" "\
@@ -29,14 +27,11 @@ Enable automatic window resizing with golden ratio.
 
 \(fn &optional ARG)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "golden-ratio" '("golden-ratio-")))
-
 ;;;***
 
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; golden-ratio-autoloads.el ends here

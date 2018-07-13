@@ -1,3 +1,12 @@
+;;; package --- Summary
+;;; Commentary:
+
+;;; Code:
+(use-package flycheck
+  :disabled t
+  :config
+  (global-flycheck-mode))
+
 (use-package alchemist
   :ensure t)
 

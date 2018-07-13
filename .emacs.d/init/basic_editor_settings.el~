@@ -1,7 +1,5 @@
 ; Remove the obnoxious icon bar
-(tool-bar-mode -1) woifneionfwenwfoi fwinfowfnwi
-owenfiwenfwoeifnwnfiowefn wiewoi owenweioeqnfiowe newfowei
-wieoinew niwenofewn
+(tool-bar-mode -1)
 ;; Remove the scroll bar as well
 (toggle-scroll-bar -1)
 
@@ -9,5 +7,3 @@ wieoinew niwenofewn
 (column-number-mode)
 
 (setq js-indent-level 2)
-
-(setq-default fill-column 110)

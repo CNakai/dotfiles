@@ -1,48 +1,68 @@
 (use-package evil
-  :ensure t)
+  :diminish
+  :config
+  (setq evil-magic (quote very-magic))
+  :general
+  (utility-leader-def
+   "h" 'evil-beginning-of-line
+   "l" 'evil-end-of-line
+   "b" 'evil-next-buffer
+   "B" 'evil-prev-buffer))
 
-(use-package evil-leader
-    :init
-    :ensure t
-    :config
-    (evil-leader/set-leader "<SPC>")
-    (evil-leader/set-key
-      "j" 'evil-scroll-down
-      "k" 'evil-scroll-up
-      "h" 'evil-beginning-of-line
-      "l" 'evil-end-of-line
-      "d" 'kill-this-buffer
-      "c" 'centered-cursor-mode
-      "b" 'evil-next-buffer
-      "B" 'evil-prev-buffer)
-    (global-evil-leader-mode))
+(use-package evil-escape
+  :diminish
+  :after evil
+  :diminish
+  :config
+  (setq-default evil-escape-key-sequence "jk")
+  (setq evil-escape-unordered-key-sequence t)
+  (setq evil-escape-delay 0.2)
+  (evil-escape-mode t))
+
+(use-package evil-numbers
+  :diminish
+  :after evil
+  :general
+  (utility-leader-def
+   "=" 'evil-numbers/inc-at-pt
+   "-" 'evil-numbers/dec-at-pt))
+
+(use-package evil-visualstar
+  :diminish
+  :after evil
+  :config
+  (global-evil-visualstar-mode))
 
 (use-package evil-commentary
-  :ensure t
+  :diminish
+  :after evil
   :config
   (evil-commentary-mode))
 
 (use-package evil-surround
-  :ensure t
+  :diminish
+  :after evil
   :config
   (global-evil-surround-mode 1))
 
 (use-package evil-exchange
-  :ensure t
+  :diminish
+  :after evil
   :config
+  (utility-leader-def
+    "x" 'evil-exchange
+    "X" 'evil-exchange-cancel)
   (evil-exchange-install))
 
-(use-package evil-escape
-  :ensure t)
-
 (use-package evil-matchit
-  :ensure t
+  :diminish
+  :after evil
   :config
-  (global-evil-matchit-mode 1))
+  (global-evil-matchit-mode t))
 
-(use-package evil-visualstar
-  :ensure t
-  :config
-  (global-evil-visualstar-mode))
+(use-package evil-magit
+  :after (evil magit)
+  :init
+  (add-hook 'magit-mode-hook 'evil-local-mode))
 
-(evil-mode)
+(evil-mode t)
