@@ -5,6 +5,7 @@ export TERM="xterm-256color"
 export PROMPT='%15<..<%~%# '
 export RPROMPT='%t'
 
+export PATH="$PATH:/home/nakai/.local/bin"
 # export GOPATH="$HOME/workspace/go"
 # export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
 # export PATH="$PATH:/usr/local/texlive/2015/bin/x86_64-linux/"
@@ -23,8 +24,10 @@ bindkey -v
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/nakai/.zshrc'
 
-autoload -Uz compinit
-compinit
+autoload -Uz +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+eval "$(stack --bash-completion-script stack)"
+
 # End of lines added by compinstall
 
 # export PATH="$HOME/.rbenv/bin:$PATH"

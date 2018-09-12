@@ -24,9 +24,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
+ '(custom-enabled-themes (quote (solarized-light solarized-dark)))
  '(custom-safe-themes
    (quote
-    ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
+    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
  '(evil-digraphs-table-user
    (quote
     (((94 58)
@@ -123,7 +124,6 @@
       . 245)
      ((117 126)
       . 361))) nil (evil-digraphs))
- '(fill-column 105)
  '(indent-tabs-mode nil)
  '(menu-bar-mode nil)
  '(org-latex-classes
@@ -163,9 +163,9 @@
            (quote
             (:family "Everson" :weight bold :height 140))))))
  '(show-paren-mode t)
- '(solarized-distinct-fringe-background t)
  '(solarized-high-contrast-mode-line t)
  '(solarized-use-more-italic t)
+ '(solarized-use-variable-pitch nil)
  '(standard-indent 2)
  '(tool-bar-mode nil)
  '(web-mode-code-indent-offset 2)
@@ -177,35 +177,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#002b36" :foreground "#839496" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight bold :height 130 :width normal :foundry "SRC" :family "Hack")))))
+ '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight bold :height 130 :width normal :foundry "SRC" :family "Hack")))))
 
-;; Temporary files setup
-(setq
- backup-by-copying t      ; don't clobber symlinks
- backup-directory-alist '(("." . "~/.saves"))    ; don't litter my fs tree
- delete-old-versions t
- kept-new-versions 6
- kept-old-versions 2
- version-control t)
-
-;; Slime setup
-(setq inferior-lisp-program "/usr/local/bin/sbcl")
-(setq slime-contribs '(slime-fancy))
-
-
-;; Uncomment in case of CAMLs
-
-;; ;; Add opam emacs directory to the load-path
-;; (setq opam-share (substring (shell-command-to-string "opam config var share 2> /dev/null") 0 -1))
-;; (add-to-list 'load-path (concat opam-share "/emacs/site-lisp"))
-;; ;; Load merlin-mode
-;; (require 'merlin)
-;; ;; Start merlin on ocaml files
-;; (add-hook 'tuareg-mode-hook 'merlin-mode t)
-;; (add-hook 'caml-mode-hook 'merlin-mode t)
-;; ;; Enable auto-complete
-;; (setq merlin-use-auto-complete-mode 'easy)
-;; ;; Use opam switch to lookup ocamlmerlin binary
-;; (setq merlin-command 'opam)
-
-(put 'downcase-region 'disabled nil)

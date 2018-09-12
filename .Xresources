@@ -62,16 +62,16 @@ XTerm*faceName:                   Terminus:size=14:antialias=true
 XTerm*selectToClipboard:          true
 
 
+URxvt.iso14755:                   false
+URxvt.iso14755_52:                false
 URxvt.font:                       xft:Hack:size=14:Bold
 URxvt.depth:                      32
 URxvt.background:                 [90]#000000
 URxvt.perl-ext-common:            default,resize-font
-URxvt.iso14755:                   false
-URxvt.iso14755_52:                false
-
-
 URxvt.keysym.C-j:		  resize-font:smaller
 URxvt.keysym.C-k:		  resize-font:bigger
+
+
 
 
 URxvt.scrollBar:                  false
