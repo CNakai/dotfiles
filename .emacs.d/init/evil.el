@@ -9,7 +9,7 @@
 (use-package evil
   :diminish
   :config
-  (setq evil-magic (quote very-magic))
+  (setq evil-magic '(very-magic))
   :general
   (general-define-key
    :states 'normal
@@ -26,7 +26,6 @@
 (use-package evil-escape
   :diminish
   :after evil
-  :diminish
   :config
   (setq-default evil-escape-key-sequence "jk")
   (setq evil-escape-unordered-key-sequence t)
