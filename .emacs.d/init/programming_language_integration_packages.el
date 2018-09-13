@@ -2,6 +2,12 @@
 ;;; Commentary:
 
 ;;; Code:
+(use-package haskell-mode
+  :ensure t)
+
+(use-package cider
+  :ensure t)
+  
 (use-package flycheck
   :disabled t
   :config
