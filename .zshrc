@@ -27,6 +27,7 @@ zstyle :compinstall filename '/home/nakai/.zshrc'
 autoload -Uz +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 eval "$(stack --bash-completion-script stack)"
+
 # End of lines added by compinstall
 
 # export PATH="$HOME/.rbenv/bin:$PATH"

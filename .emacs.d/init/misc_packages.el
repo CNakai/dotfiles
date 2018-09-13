@@ -1,18 +1,13 @@
+(use-package restart-emacs
+  :general
+  (utility-leader-def
+    "C-r" 'restart-emacs))
+
+(use-package magit
+  :diminish
+  :general
+  (utility-leader-def
+    "g" 'magit-status))
+
 (use-package fill-column-indicator
   :ensure t)
-
-(use-package org-present
-  :ensure t
-  :config
-  (add-hook 'org-present-mode-hook
-            (lambda ()
-              (org-present-big)
-              (org-display-inline-images)
-              (org-present-hide-cursor)
-              (org-present-read-only)))
-  (add-hook 'org-present-mode-quit-hook
-            (lambda ()
-              (org-present-small)
-              (org-remove-inline-images)
-              (org-present-show-cursor)
-              (org-present-read-write))))
