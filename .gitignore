@@ -1,1 +1,12 @@
 *
+!.gitignore
+!.bashrc
+!.bash_profile
+!.emacs.d/init.el
+!.emacs.d/init/*
+!.i3/*
+!.profile
+!.xinitrc
+!.Xmodmap
+!.Xresources
+!.zshrc
