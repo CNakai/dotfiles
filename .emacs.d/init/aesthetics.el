@@ -1,8 +1,18 @@
 (use-package solarized-theme
   :diminish
-  :ensure t
-  :config
-  (load-theme 'solarized-dark t))
+  :ensure t)
+
+(load-theme 'solarized-light t)
+(setq active-theme 'solarized-light)
+(defun toggle-solarized-theme ()
+  (interactive)
+  (if (eq active-theme 'solarized-light)
+      (setq active-theme 'solarized-dark)
+    (setq active-theme 'solarized-light))
+  (load-theme active-theme))
+
+(utility-leader-def
+  "s" 'toggle-solarized-theme)
 
 (use-package golden-ratio
   :diminish
