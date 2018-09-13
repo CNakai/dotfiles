@@ -1,9 +1,14 @@
 *
-!.gitignore
+!*/
+.cache/*
+.cordova/*
+playspace/*
+workspace/*
+!/.emacs.d/init.el
+!/.emacs.d/init/**
+!./.gitignore
 !.bashrc
 !.bash_profile
-!.emacs.d/init.el
-!.emacs.d/init/*
 !.i3/*
 !.profile
 !.xinitrc
