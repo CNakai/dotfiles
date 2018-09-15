@@ -1,3 +1,0 @@
-(load "basic_editor_settings.el")
-(load "evil_and_related_packages.el")
-(load "misc_packages.el")
