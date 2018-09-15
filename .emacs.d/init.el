@@ -14,7 +14,7 @@
 (setq use-package-always-ensure t)
 (setq use-package-compute-statistics t)
 
-(load "~/.emacs.d/init/load_all.el")
+(load-file ".emacs.d/init/load_all.el")
 
 
 ;; Customization based configuration
