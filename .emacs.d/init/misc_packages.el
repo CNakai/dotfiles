@@ -11,3 +11,8 @@
 
 (use-package fill-column-indicator
   :ensure t)
+
+(use-package lorem-ipsum
+  :diminish
+  :config
+  (lorem-ipsum-use-default-bindings))

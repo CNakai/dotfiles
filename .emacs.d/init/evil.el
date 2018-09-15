@@ -56,7 +56,7 @@
   :diminish
   :after evil
   :config
-  (global-evil-surround-mode 1))
+  (global-evil-surround-mode t))
 
 (use-package evil-exchange
   :diminish
