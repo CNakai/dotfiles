@@ -117,6 +117,7 @@ keycode 115 = End NoSymbol End
 keycode 116 = Down NoSymbol Down
 ! 117 Used to be bound to Page-Down via Next NoSymbol Next
 keycode 117 = Right NoSymbol Right
+keycode 117 = Next NoSymbol Next
 keycode 118 = Insert NoSymbol Insert
 keycode 119 = Delete NoSymbol Delete
 keycode 120 =

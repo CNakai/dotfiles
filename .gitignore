@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *
 !*/
 .cache/*
@@ -15,3 +16,8 @@ workspace/*
 !.Xmodmap
 !.Xresources
 !.zshrc
+=======
+workspace/*
+.dropbox
+.dropbox.cache
+>>>>>>> 6d35701e7ef9b92c4ce8f594e493a9d154641506
