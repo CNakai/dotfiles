@@ -109,12 +109,14 @@ keycode 108 = Alt_R Meta_R Alt_R Meta_R
 keycode 109 = Linefeed NoSymbol Linefeed
 keycode 110 = Home NoSymbol Home
 keycode 111 = Up NoSymbol Up
-keycode 112 = Prior NoSymbol Prior
+! 112 Used to be bound to Page-Up via Prior NoSymbol Prior
+keycode 112 = Left NoSymbol Left 
 keycode 113 = Left NoSymbol Left
 keycode 114 = Right NoSymbol Right
 keycode 115 = End NoSymbol End
 keycode 116 = Down NoSymbol Down
-keycode 117 = Next NoSymbol Next
+! 117 Used to be bound to Page-Down via Next NoSymbol Next
+keycode 117 = Right NoSymbol Right
 keycode 118 = Insert NoSymbol Insert
 keycode 119 = Delete NoSymbol Delete
 keycode 120 =
