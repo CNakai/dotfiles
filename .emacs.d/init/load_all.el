@@ -4,5 +4,5 @@
 (load "~/.emacs.d/init/misc_packages.el")
 (load "~/.emacs.d/init/aesthetics.el")
 (load "~/.emacs.d/init/evil.el")
-;;(load "~/.emacs.d/init/programming_language_integration_packages.el")
-;;(load "~/.emacs.d/init/org_settings.el")
+(load "~/.emacs.d/init/org.el")
+(load "~/.emacs.d/init/programming_language_integration_packages.el")

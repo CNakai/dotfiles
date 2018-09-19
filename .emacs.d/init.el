@@ -151,7 +151,7 @@
  '(org-startup-indented t)
  '(package-selected-packages
    (quote
-    (typescript-mode flycheck default-text-scale haskell-emacs haskell-mode alchemist elixir-mode linum-relative evil-lion evil-leader evil-exchange evil-commentary macrostep slime evil-tutor evil-surround evil-matchit evil-escape ess)))
+    (org-present typescript-mode flycheck default-text-scale haskell-emacs haskell-mode alchemist elixir-mode linum-relative evil-lion evil-leader evil-exchange evil-commentary macrostep slime evil-tutor evil-surround evil-matchit evil-escape ess)))
  '(safe-local-variable-values
    (quote
     ((eval face-remap-add-relative
