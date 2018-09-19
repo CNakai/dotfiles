@@ -54,8 +54,8 @@ sudo pacman -S --noconfirm --needed \
      ttf-hack \
      unzip \
      xclip \
-     zip
-     zsh \
+     zip \
+     zsh
 
 pacaur -S --needed --noconfirm \
        puddletag \
