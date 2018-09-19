@@ -2,18 +2,20 @@
 (setq org-tags-column 0)
 
 (use-package org-present
-  :ensure t
-  :config
+  :init
   (add-hook 'org-present-mode-hook
             (lambda ()
               (org-present-big)
-              (org-display-inline-images)
-              (org-present-read-only)))
+              (org-display-inline-images)))
   (add-hook 'org-present-mode-quit-hook
             (lambda ()
               (org-present-small)
-              (org-remove-inline-images)
-              (org-present-read-write))))
+              (org-remove-inline-images)))
+  :general
+  (general-define-key
+   "<prior>" 'org-present-prev
+   "<next>"  'org-present-next))
+
 
 (defun jdp-org-sort ()
   (interactive)
@@ -28,8 +30,7 @@
     (beginning-of-buffer)
     (org-sort-entries t ?o)
     (org-overview)
-    (org-cycle)
-    ))
+    (org-cycle)))
 
 (defun jdp-org-sparse-todo ()
   (interactive)
