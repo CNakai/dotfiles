@@ -151,7 +151,7 @@
  '(org-startup-indented t)
  '(package-selected-packages
    (quote
-    (org-present typescript-mode flycheck default-text-scale haskell-emacs haskell-mode alchemist elixir-mode linum-relative evil-lion evil-leader evil-exchange evil-commentary macrostep slime evil-tutor evil-surround evil-matchit evil-escape ess)))
+    (org-present typescript-mode flycheck default-text-scale haskell-emacs haskell-mode elixir-mode linum-relative macrostep slime ess)))
  '(safe-local-variable-values
    (quote
     ((eval face-remap-add-relative
@@ -178,4 +178,3 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight bold :height 130 :width normal :foundry "SRC" :family "Hack")))))
-

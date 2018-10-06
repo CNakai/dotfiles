@@ -9,12 +9,16 @@
 (use-package evil
   :diminish
   :config
-  (setq evil-magic '(very-magic))
+  (setq evil-want-Y-yank-to-eol t
+        evil-magic 'very-magic
+        evil-search-module 'evil-search)
   :general
   (general-define-key
    :states 'normal
    "j" 'evil-next-visual-line
-   "k" 'evil-previous-visual-line)
+   "k" 'evil-previous-visual-line
+   "M-j" 'evil-scroll-down
+   "M-k" 'evil-scroll-up)
   (utility-leader-def
     :states 'motion
     "h" 'evil-beginning-of-line
