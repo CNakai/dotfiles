@@ -9,10 +9,16 @@
   (utility-leader-def
     "g" 'magit-status))
 
-(use-package fill-column-indicator
-  :ensure t)
-
 (use-package lorem-ipsum
   :diminish
   :config
   (lorem-ipsum-use-default-bindings))
+
+(use-package speed-type
+  :diminish)
+
+(use-package xkcd
+  :diminish)
+
+(use-package fireplace
+  :diminish)

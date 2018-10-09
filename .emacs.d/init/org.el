@@ -32,6 +32,13 @@
    "<next>"  'org-present-next))
 
 
+(use-package org-bullets
+  :diminish
+  :config
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+
+
+
 (defun jdp-org-sort ()
   (interactive)
   (save-excursion

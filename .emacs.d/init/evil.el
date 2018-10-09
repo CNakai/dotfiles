@@ -1,6 +1,8 @@
 ;; Orphaned Keyboard Shortcuts
 (utility-leader-def
   "1" 'delete-other-windows
+  "2" 'split-window-below
+  "3" 'split-window-right
   "d" 'kill-this-buffer
   "o" 'other-window
   "w" 'save-buffer

@@ -24,10 +24,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
- '(custom-enabled-themes (quote (solarized-light solarized-dark)))
+ '(custom-enabled-themes (quote (solarized-light)))
  '(custom-safe-themes
    (quote
-    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
+    ("c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
  '(evil-digraphs-table-user
    (quote
     (((94 58)
@@ -163,7 +163,6 @@
            (quote
             (:family "Everson" :weight bold :height 140))))))
  '(show-paren-mode t)
- '(solarized-high-contrast-mode-line t)
  '(solarized-use-more-italic t)
  '(solarized-use-variable-pitch nil)
  '(standard-indent 2)

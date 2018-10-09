@@ -4,16 +4,10 @@
 ;;; Code:
 (use-package haskell-mode)
 
-(use-package cider)
-  
 (use-package flycheck
   :disabled t
   :config
   (global-flycheck-mode))
-
-(use-package alchemist)
-
-(use-package php-mode)
 
 (use-package web-mode
   :config
@@ -22,7 +16,12 @@
   (setq web-mode-code-indent-offset 4)
   (setq web-mode-indent-style 4))
 
+;; (use-package alchemist
+;;   :disabled t)
 
+;; (use-package cider
+;;   :disabled t)
+  
 ;; Slime setup
 ;; (setq inferior-lisp-program "/usr/local/bin/sbcl")
 ;; (setq slime-contribs '(slime-fancy))
