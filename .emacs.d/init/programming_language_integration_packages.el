@@ -11,33 +11,19 @@
 
 (use-package web-mode
   :config
-  (setq web-mode-markup-indent-offset 4)
-  (setq web-mode-css-indent-offset 4)
-  (setq web-mode-code-indent-offset 4)
-  (setq web-mode-indent-style 4))
-
-;; (use-package alchemist
-;;   :disabled t)
-
-;; (use-package cider
-;;   :disabled t)
-  
-;; Slime setup
-;; (setq inferior-lisp-program "/usr/local/bin/sbcl")
-;; (setq slime-contribs '(slime-fancy))
-
-
-;; Uncomment in case of CAMLs
-
-;; ;; Add opam emacs directory to the load-path
-;; (setq opam-share (substring (shell-command-to-string "opam config var share 2> /dev/null") 0 -1))
-;; (add-to-list 'load-path (concat opam-share "/emacs/site-lisp"))
-;; ;; Load merlin-mode
-;; (require 'merlin)
-;; ;; Start merlin on ocaml files
-;; (add-hook 'tuareg-mode-hook 'merlin-mode t)
-;; (add-hook 'caml-mode-hook 'merlin-mode t)
-;; ;; Enable auto-complete
-;; (setq merlin-use-auto-complete-mode 'easy)
-;; ;; Use opam switch to lookup ocamlmerlin binary
-;; (setq merlin-command 'opam)
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-indent-style 2)
+  (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.handlebars\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.ejs\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.css\\'" . web-mode)))

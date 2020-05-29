@@ -1,71 +1,52 @@
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+    source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
 export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
-export TERM="xterm-256color"
-export PROMPT='%15<..<%~%# '
-export RPROMPT='%t'
-
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+	export PROMPT='%n@%M %15<..<%~%# '
+else
+	export PROMPT='%15<..<%~%# '
+fi
+# export RPROMPT='%t'
 export PATH="$PATH:/home/nakai/.local/bin"
-# export GOPATH="$HOME/workspace/go"
-# export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
-# export PATH="$PATH:/usr/local/texlive/2015/bin/x86_64-linux/"
 export PATH="$PATH:/home/nakai/.node_modules/bin"
-export npm_config_prefix=~/.node_modules
-# export NODE_PATH="$NODE_PATH:/home/nakai/.npm-global/lib/node_modules"
-export PATH="$PATH:$HOME/.gem/ruby/2.5.0/bin"
+export GERBIL_HOME="/opt/gerbil-scheme-git"
+export PATH="$PATH:/opt/gerbil-scheme-git/bin"
 
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=5000
-SAVEHIST=1000
-setopt appendhistory autocd beep extendedglob nomatch notify
-bindkey -v
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/nakai/.zshrc'
+alias csi=chicken-csi
+alias csc=chicken-csc
 
-autoload -Uz +X compinit && compinit
-autoload -U +X bashcompinit && bashcompinit
-eval "$(stack --bash-completion-script stack)"
+zstyle ':completion:*' rehash true
 
-# End of lines added by compinstall
+export PATH="/home/nakai/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
 
-# export PATH="$HOME/.rbenv/bin:$PATH"
-# eval "$(rbenv init -)"
+export NODE_PATH="/usr/lib/node_modules"
 
-# export PATH="$PATH:/usr/local/avr/bin"
 
-# Make sure that the output of ls is colorized
-alias ls='ls --color=auto'
 # Allow for my own stupidity with exiting
 alias exi='exit'
 alias :exi='exit'
 
-# Start qutebrowser with its webengine
-alias qutebrowser='qutebrowser --backend webengine'
-
 # make python3 the default python
 alias python='python3'
 
-# OPAM configuration
-# . /home/nakai/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
-# export PATH="$HOME/.plenv/bin:$PATH"
-# eval "$(plenv init -)"
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
+# Allow easily executing connection scripts
+export PATH="$PATH:/home/nakai/.ssh/connection_scripts"
 
-bindkey -v
 bindkey jk vi-cmd-mode
 bindkey kj vi-cmd-mode
 function zle-line-init zle-keymap-select zle-line-finish () {
-    if [ "$TERM" = "xterm-256color" ]; then
+    if [ "$TERM" = "rxvt-unicode-256color" ]; then
         if [ $KEYMAP = vicmd ]; then
-            # the command mode for vi
-            echo -ne "\e[1 q"
+            echo -ne "\e[1 q" # the command mode for vi
         else
-            # the insert mode for vi
-            echo -ne "\e[5 q"
+            echo -ne "\e[5 q" # the insert mode for vi
         fi
     fi
 }
@@ -73,5 +54,25 @@ zle -N zle-keymap-select
 zle -N zle-line-init
 zle -N zle-line-finish
 
-alias emacs-debug='emacs --debug-init'
+# # Lines configured by zsh-newuser-install
+# HISTFILE=~/.histfile
+# HISTSIZE=5000
+# SAVEHIST=1000
+# setopt appendhistory autocd beep extendedglob nomatch notify
+# bindkey -v
+# End of lines configured by zsh-newuser-install
 
+
+# # The following lines were added by compinstall
+# zstyle :compinstall filename '/home/nakai/.zshrc'
+
+# autoload -Uz +X compinit && compinit
+# autoload -U +X bashcompinit && bashcompinit
+# eval "$(stack --bash-completion-script stack)"
+# # End of lines added by compinstall
+
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+alias cp="cp -i"
+alias mv="mv -i"
+alias rm="rm -i"

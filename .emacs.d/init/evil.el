@@ -6,7 +6,8 @@
   "d" 'kill-this-buffer
   "o" 'other-window
   "w" 'save-buffer
-  "R" (lambda () (interactive) (revert-buffer :ignore-auto :noconfirm)))
+  "R" (lambda () (interactive) (revert-buffer :ignore-auto :noconfirm))
+  "C-r" 'auto-revert-mode)
 
 (use-package evil
   :diminish
@@ -26,8 +27,15 @@
     "h" 'evil-beginning-of-line
     "l" 'evil-end-of-line)
   (utility-leader-def
-    "b" 'evil-next-buffer
-    "B" 'evil-prev-buffer))
+    "b" 'evil-switch-to-windows-last-buffer))
+
+(use-package evil-goggles
+  :diminish
+  :config
+  (setq evil-goggles-pulse t
+        evil-goggles-duration 0.100)
+  (evil-goggles-mode)
+  (evil-goggles-use-diff-faces))
 
 (use-package evil-escape
   :diminish
@@ -72,6 +80,13 @@
     "x" 'evil-exchange
     "X" 'evil-exchange-cancel)
   (evil-exchange-install))
+
+(use-package evil-args
+  :diminish
+  :after evil
+  :config
+  (define-key evil-inner-text-objects-map "a" 'evil-inner-arg)
+  (define-key evil-outer-text-objects-map "a" 'evil-outer-arg))
 
 (use-package evil-matchit
   :diminish
